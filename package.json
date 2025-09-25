@@ -4,9 +4,10 @@
   "description": "Multi-tenant SaaS Notes Application with role-based access and subscription management",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
+    "postbuild": "prisma db push",
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
     "db:seed": "node scripts/seed.js"
